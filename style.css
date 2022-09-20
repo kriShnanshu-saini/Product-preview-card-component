@@ -1,0 +1,118 @@
+:root{
+    --dark-cyan : hsl(158,36%, 37%);
+    --cream : hsl(30,38%,96%);
+    --dark-blue : hsl(212, 21%, 14%);
+    --dark-grey-blue : hsl(228, 12%, 48%);
+    --white : hsl(0, 0%, 100%);
+    --p-fontSize : 14px;
+    --fontFamily-MR : 'Monsterrat',arial;
+    --font-family-FR : 'Fraunces',arial;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: var(--p-fontSize);
+    font-family: var(--fontFamily-MR), sans-serif;
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1.5em;
+}
+.container{
+    width: 375px;
+    margin-bottom: 3em;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 1em 1em 0 0 ;
+}
+.container article:first-child img{
+    width: 100%;
+}
+.container article:last-child{
+    max-width: 100%;
+    background-color: var(--white);
+    padding: 1.5em;
+    border-radius: 0 0 1em 1em;
+}
+h1, .price{
+    font-family: var(--font-family-FR),sans-serif;
+    font-size: 2em;
+}
+h2{
+    font-family: var(--fontFamily-MR),sans-serif;
+    font-weight: 500; 
+    font-size: var(--p-fontSize);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+h2,
+p,
+ul>li:last-child{
+    color: var(--dark-grey-blue);
+}
+h1{
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+p{
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1.5em;
+}
+ul > li:first-child{
+    color: var(--dark-cyan);
+}
+button{
+    background-color: var(--dark-cyan);
+    border: none;
+    outline: none;
+    padding: 1.2em;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    font-family: var(--fontFamily-MR),sans-serif;
+    border-radius: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button img{
+    margin-right: 1em;
+    width: 1.2em;
+
+}
+button:hover{
+    background-color: #214a3c;
+}
+@media only screen and (min-width: 1440px){
+    .container{
+        width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container article:first-child img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1em 0 0 1em;
+    }
+    .container article:last-child{
+        border-radius: 0 1em 1em 0;
+    }
+}
